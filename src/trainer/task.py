@@ -62,7 +62,7 @@ def log_metrics(y_pred: pd.Series, y_true: pd.Series, output_dir: str):
     auc = roc_auc_score(y_score=y_pred, y_true=y_true)
     cm = confusion_matrix(labels=[False, True], y_pred=y_pred, y_true=y_true)
 
-    with open(f"{output_dir}/metrics.json", "w") as f:    
+    with open(f"{output_dir}/metrics.json", "w") as f:
         metrics = {"auc": auc}
         metrics["confusion_matrix"] = {}
         metrics["confusion_matrix"]["categories"] = TARGET_LABELS

@@ -3,7 +3,7 @@ steps:
     name: gcr.io/cloud-builders/git
     entrypoint: git
     args: ['clone', '--depth', '1', '--branch', '$BRANCH_NAME', 
-          'git@github.com:Yorko/gcp-ghack-mlops.git']
+          'https://github.com/Yorko/gcp-ghack-mlops']
 
   - id: 'Create a virtual env'
     name: python:3.10-slim

@@ -90,7 +90,6 @@ def train(training_data_dir: str, validation_data_dir: str, output_dir: str) -> 
     os.makedirs(output_dir, exist_ok=True)
     joblib.dump(model, f"{output_dir}/model.joblib")
 
-    
     y_pred = model.predict(X_test)
     log_metrics(y_pred, y_test, output_dir)
 
